@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Tic Tac Toe </title>
+		<meta name = "viewport" content = "width=device-width">
+		<style>
+			table, th, td{
+				border: 2px solid black;			
+			}
+			table{
+				width: 100%;			
+			}
+			td{
+				padding: 49px;
+			}
+			h1{
+				color: green;
+			}
+			#x{
+				color: black;
+				background-color: green;
+				position: fixed;
+				bottom: 75px;
+				left: 10px;
+				height: 100px;
+				width:100px;
+			}
+			#o{
+				color: black;
+				background-color: green;
+				position: fixed;
+				bottom: 75px;
+				right:10px;
+				height: 100px;
+				width:100px;
+			}
+			#reset{
+				color: black;
+				background-color: green;
+				position: fixed;
+				top: 20px;
+				right:10px;
+				height: 50px;
+				width:60px;
+			}
+			#count{
+				color: black;
+				background-color: green;
+				position: fixed;
+				top: 20px;
+				right:100px;
+				height: 50px;
+				width: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Tic Tac Toe </h1>
+		<table>
+			<tr>
+				<script>
+					document.write("<td id='a1'>"+localStorage.a1+"</td>")
+				</script>
+				<script>
+					document.write("<td id='b1'>"+localStorage.b1+"</td>")
+				</script>
+				<script>
+					document.write("<td id='c1'>"+localStorage.c1+"</td>")
+				</script>			
+			</tr>
+			<tr>
+				<script>
+					document.write("<td id='a2'>"+localStorage.a2+"</td>")
+				</script>
+				<script>
+					document.write("<td id='b2'>"+localStorage.b2+"</td>")
+				</script>
+				<script>
+					document.write("<td id='c2'>"+localStorage.c2+"</td>")
+				</script>			
+			</tr>
+			<tr>
+				<script>
+					document.write("<td id='a3'>"+localStorage.a3+"</td>")
+				</script>
+				<script>
+					document.write("<td id='b3'>"+localStorage.b3+"</td>")
+				</script>
+				<script>
+					document.write("<td id='c3'>"+localStorage.c3+"</td>")
+				</script>
+			</tr>
+		</table>
+			<script>
+				document.write("<button id='x' style = 'background-color: "+localStorage.cx+";'> X </button>")
+			</script>
+			<script>
+				document.write("<button id='o' style = 'background-color: "+localStorage.co+";'> O </button>")
+			</script>
+			<script>
+				document.write("<button id = 'count'>" +(localStorage.count1.length - 2)+"</button>")
+			</script>
+		<button id='reset'> Start Over </button>
+	</body>
+	<script>
+		var game_over = false
+	</script>
+	<script>
+		function click_x(){
+			if((localStorage.count1.length - 1) == 0){	
+				localStorage.co = "grey"
+				localStorage.cx = "green"
+				localStorage.v = "X"
+				localStorage.count = 0
+				localStorage.count1 += 1
+				window.location.reload()
+			}else{
+	
+			}
+		}
+		function click_o(){
+			if((localStorage.count1.length - 1) == 0){
+				localStorage.cx = "grey"
+				localStorage.co = "green"
+				localStorage.v = "O"
+				localStorage.count = 0
+				localStorage.count1 +=1
+				window.location.reload()
+			}else{
+	
+			}
+		}
+		function play_ba1(){
+			if(localStorage.v != "" && (localStorage.count.length - 1) == 0 && localStorage.a1 == "" && !game_over){
+				localStorage.a1 = localStorage.v
+				localStorage.count += 1
+				if(localStorage.v == "O"){
+					localStorage.cx = "green"
+					localStorage.co = "grey"
+					localStorage.v = "X"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else if(localStorage.v == "X"){
+					localStorage.cx = "grey"
+					localStorage.co = "green"
+					localStorage.v = "O"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else{
+			
+				}
+				window.location.reload()
+			}else{
+	
+			}
+		}
+		function play_bb1(){
+			if(localStorage.v != "" && (localStorage.count.length - 1) == 0 && localStorage.b1 == "" && !game_over){
+				localStorage.b1 = localStorage.v
+				localStorage.count += 1
+				if(localStorage.v == "O"){
+					localStorage.cx = "green"
+					localStorage.co = "grey"
+					localStorage.v = "X"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else if(localStorage.v == "X"){
+					localStorage.cx = "grey"
+					localStorage.co = "green"
+					localStorage.v = "O"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else{
+			
+				}
+				window.location.reload()
+			}else{
+	
+			}
+		}
+		function play_bc1(){
+			if(localStorage.v != "" && (localStorage.count.length - 1) == 0 && localStorage.c1 == "" && !game_over){
+				localStorage.c1 = localStorage.v
+				localStorage.count += 1
+				if(localStorage.v == "O"){
+					localStorage.cx = "green"
+					localStorage.co = "grey"
+					localStorage.v = "X"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else if(localStorage.v == "X"){
+					localStorage.cx = "grey"
+					localStorage.co = "green"
+					localStorage.v = "O"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else{
+			
+				}
+				window.location.reload()
+			}else{
+	
+			}
+		}
+		function play_ba2(){
+			if(localStorage.v != "" && (localStorage.count.length - 1) == 0 && localStorage.a2 == "" && !game_over){
+				localStorage.a2 = localStorage.v
+				localStorage.count += 1
+				if(localStorage.v == "O"){
+					localStorage.cx = "green"
+					localStorage.co = "grey"
+					localStorage.v = "X"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else if(localStorage.v == "X"){
+					localStorage.cx = "grey"
+					localStorage.co = "green"
+					localStorage.v = "O"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else{
+			
+				}
+				window.location.reload()
+			}else{
+	
+			}
+		}
+		function play_bb2(){
+			if(localStorage.v != "" && (localStorage.count.length - 1) == 0 && localStorage.b2 == "" && !game_over){
+				localStorage.b2 = localStorage.v
+				localStorage.count += 1
+				if(localStorage.v == "O"){
+					localStorage.cx = "green"
+					localStorage.co = "grey"
+					localStorage.v = "X"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else if(localStorage.v == "X"){
+					localStorage.cx = "grey"
+					localStorage.co = "green"
+					localStorage.v = "O"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else{
+			
+				}
+				window.location.reload()
+			}else{
+	
+			}
+		}
+		function play_bc2(){
+			if(localStorage.v != "" && (localStorage.count.length - 1) == 0 && localStorage.c2 == "" && !game_over){
+				localStorage.c2 = localStorage.v
+				localStorage.count += 1
+				if(localStorage.v == "O"){
+					localStorage.cx = "green"
+					localStorage.co = "grey"
+					localStorage.v = "X"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else if(localStorage.v == "X"){
+					localStorage.cx = "grey"
+					localStorage.co = "green"
+					localStorage.v = "O"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else{
+			
+				}
+				window.location.reload()
+			}else{
+	
+			}
+		}
+		function play_ba3(){
+			if(localStorage.v != "" && (localStorage.count.length - 1) == 0 && localStorage.a3 == "" && !game_over){
+				localStorage.a3 = localStorage.v
+				localStorage.count += 1
+				if(localStorage.v == "O"){
+					localStorage.cx = "green"
+					localStorage.co = "grey"
+					localStorage.v = "X"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else if(localStorage.v == "X"){
+					localStorage.cx = "grey"
+					localStorage.co = "green"
+					localStorage.v = "O"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else{
+			
+				}
+				window.location.reload()
+			}else{
+	
+			}
+		}
+		function play_bb3(){
+			if(localStorage.v != "" && (localStorage.count.length - 1) == 0 && localStorage.b3 == "" && !game_over){
+				localStorage.b3 = localStorage.v
+				localStorage.count += 1
+				if(localStorage.v == "O"){
+					localStorage.cx = "green"
+					localStorage.co = "grey"
+					localStorage.v = "X"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else if(localStorage.v == "X"){
+					localStorage.cx = "grey"
+					localStorage.co = "green"
+					localStorage.v = "O"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else{
+			
+				}
+				window.location.reload()
+			}else{
+	
+			}
+		}
+		function play_bc3(){
+			if(localStorage.v != "" && (localStorage.count.length - 1) == 0 && localStorage.c3 == "" && !game_over){
+				localStorage.c3 = localStorage.v
+				localStorage.count += 1
+				if(localStorage.v == "O"){
+					localStorage.cx = "green"
+					localStorage.co = "grey"
+					localStorage.v = "X"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else if(localStorage.v == "X"){
+					localStorage.cx = "grey"
+					localStorage.co = "green"
+					localStorage.v = "O"
+					localStorage.count = 0
+					localStorage.count1 += 1
+				}else{
+			
+				}
+				window.location.reload()
+			}else{
+	
+			}
+		}
+	</script>
+	<script>
+		var ba1 = document.getElementById("a1")
+		var ba2 = document.getElementById("a2")
+		var ba3 = document.getElementById("a3")
+		var bb1 = document.getElementById("b1")
+		var bb2 = document.getElementById("b2")
+		var bb3 = document.getElementById("b3")
+		var bc1 = document.getElementById("c1")
+		var bc2 = document.getElementById("c2")
+		var bc3 = document.getElementById("c3")
+		var bx = document.getElementById("x")
+		var bo = document.getElementById("o")
+		var reset = document.getElementById("reset")
+		
+		function reset_function(){
+			localStorage.v = ""
+			localStorage.co = "green"
+			localStorage.cx = "green"
+			localStorage.count = 0
+			localStorage.count1 = 0
+			localStorage.a1 = ""
+			localStorage.b1 = ""
+			localStorage.c1 = ""
+			localStorage.a2 = ""
+			localStorage.b2 = ""
+			localStorage.c2 = ""
+			localStorage.a3 = ""
+			localStorage.b3 = ""
+			localStorage.c3 = ""
+			window.location.reload()
+		}
+		</script>
+		<script>
+			function win(){
+				if(localStorage.a1 == localStorage.a2 &&  localStorage.a2 == localStorage.a3 && localStorage.a2 != ""){			
+					alert("Player "+ localStorage.a1 + " wins")
+					game_over = true			}else if(localStorage.b1 == localStorage.b2 &&  localStorage.b2 == localStorage.b3 && localStorage.b2 != ""){			
+					alert("Player "+ localStorage.b1 + " wins")
+					game_over = true			}else if(localStorage.c1 == localStorage.c2 &&  localStorage.c2 == localStorage.c3 && localStorage.c2 != ""){			
+					alert("Player "+ localStorage.c1 + " wins")
+					game_over = true			}else if(localStorage.a1 == localStorage.b1 &&  localStorage.b1 == localStorage.c1 && localStorage.c1 != ""){			
+					alert("Player "+ localStorage.c1 + " wins")
+					game_over = true			}else if(localStorage.a2 == localStorage.b2 &&  localStorage.b2 == localStorage.c2 && localStorage.c2 != ""){			
+					alert("Player "+ localStorage.c2 + " wins")
+					game_over = true			}else if(localStorage.a3 == localStorage.b3 &&  localStorage.b3 == localStorage.c3 && localStorage.c3 != ""){			
+					alert("Player "+ localStorage.c3 + " wins")
+					game_over = true			}else if(localStorage.a1 == localStorage.b2 &&  localStorage.b2 == localStorage.c3 && localStorage.b2 != ""){			
+					alert("Player "+ localStorage.b2 + " wins")
+					game_over = true			}else if(localStorage.c1 == localStorage.b2 &&  localStorage.b2 == localStorage.a3 && localStorage.b2 != ""){			
+					alert("Player "+ localStorage.b2 + " wins")
+					game_over = true			}else if(localStorage.a1 != "" && localStorage.a2 != "" && localStorage.a3 != "" && localStorage.b1 != "" && localStorage.b2 != "" && localStorage.b3 != "" && localStorage.c1 != "" && localStorage.c2 != "" && localStorage.c3 != ""){
+					alert("Draw")
+					game_over = true	
+				}else{
+	
+				}
+			}
+			win()
+		</script>
+		<script src= "simpleai.js" type = "text/JavaScript"></script>
+		<script>	
+		window.onload = function (){
+			x.onclick = click_x
+			o.onclick = click_o
+			reset.onclick = reset_function
+			ba1.onclick = play_ba1
+			ba2.onclick = play_ba2
+			ba3.onclick = play_ba3
+			bb1.onclick = play_bb1
+			bb2.onclick = play_bb2
+			bb3.onclick = play_bb3
+			bc1.onclick = play_bc1
+			bc2.onclick = play_bc2
+			bc3.onclick = play_bc3
+		}
+	</script>
+</html>
